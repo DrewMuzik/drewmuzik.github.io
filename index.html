@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello MPreet3 Player</title>
+			<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		
+	</head>
+	<body>
+		<nav>
+    		<ul>
+        		<li>Overview</a></li>
+			<li>About Us</a></li>
+	        	<li>Schematics</a></li>
+        		<li>Hardware Layout</a></li>
+        		<li>Software Layout</a></li>
+    		</ul>
+		</nav>
+		<div class="container">
+    		<div class="blurb">
+		<div class = "container_12 clearfix">
+			<div id ="header" class ="grid_12">
+        			<h1>MPreet3</h1>
+			</div>
+			<div id="feature" class="grid_6">
+			<figure class = "center">
+				<img src = "images/enclosure.jpg" alt="Image of Mp3 Case" height = 300 width = 300 />
+				</br>
+			<figcaption> Figure 1. Finished Design of Mp3 Player. </figcaption>
+			</figure>
+			</div>
+			<div id="feature" class="grid_6">
+				<p><i>"An Mp3 player for the embedded systems course (Cmpe 146) at SJSU, under the instruction of Preetpal Kang."</i></p>
+			</div>
+			
+				<p> Functionalities of the MPreet3 include song playback form a micro sd card and a screen to display song metadata
+				as well as volume level. A potentiometer allows for dymanic volume control during playback and a button interface
+				allows for a menu interface to choose a song.
+				</p> 
+			
+			
+			<h2>Hardware Overview </h2>
+		
+			<p> The Hardware layout of our mp3 player consists of the following. </p>
+			<ul>
+				<li>4x20 Character Uart LCD Screen</li>
+				<li>VLSI VS1053 Audio Codec from Geetech</li>
+				<li>SJ One Board running LPC 1758 ARM Cortex M3 MicroProcessor </li>
+				<li>3000 mAh Power Bank</li>
+				<li>4-pin push button interface, Rotary Potentiometer, SPST Power Switch</li>
+			</ul>
+			
+			
+			<figure>
+				<img src = "images/mp3inside.jpg" alt="Image of inside Mp3 case" height = 500 width = 500 /> 
+				</br>
+			<figcaption> Figure 2. Inside hardware components of Mp3 Project. </figcaption>
+			</figure>
+						
+			<h2> Software Overview </h2>
+			<p> The software layout is based around FreeRTOS with a CPU clock speed at 46 Mhz and a tick rate of 1 ms. 
+				Each function of the mp3 player is seperated into its own task, using mutexes and binary semaphores to establish a thread safe system.
+				<p> Driver libraries created: </p>
+				<ul>
+					<li> SPI </li>
+					<li> Uart </li>
+					<li> Decoder </li>
+					<li> LCD Screen</li>
+					<li> Read mp3 file metadata (form of id3 tags) </li>
+					<li> ADC </li>	
+				</ul>
+				<p>FreeRTOS Tasks to Handle Mp3 Functions:</p>
+				<ul>
+					<li> Get / Show Volume </li>
+					<li> Display Song Data </li>
+					<li> Menu Interface </li>
+					<li> Read Song Data </li>
+					<li> Mp3 Playback </li>
+					<li> Playback Interface </li> 
+				</ul>
+			</p>
+
+			<h3> LCD Screen and algorithm of usage </h3>
+			<p> Talk about how data sent ot screen
+				(inside sofware page can talk about boot screen, timing problems, how parameters of screen print function work and library created).
+			</p>
+
+			<h3> Audio Decoder and algorithm of usage </h3>
+			<p> talk about how data sent to codec (inside software can talk about checking the dreq (buffer ststus bit) before sending more data )</p>
+			<p> <a href="/about">Read more...</a></p>
+    			<video src= "shrunkMp3playback.mp4" width="400" height="400" preload controls loop>
+			<p> Example video of Mp3 player usage </p>
+			</video>
+		</div><!-- /.container 12 -->
+		</div><!-- /.blurb -->
+		</div><!-- /.container -->
+		
+	</body>
+
+	<footer>
+    		<ul>
+        		<li><a href="mailto:muzik.drew@gmail.com">email</a></li>
+        		<li><a href="https://github.com/DrewMuzik">github.com/DrewMuzik</a></li>
+			</ul>
+	</footer>
+	
+</html>

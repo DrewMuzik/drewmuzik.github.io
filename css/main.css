@@ -2,7 +2,7 @@
     font-family: 'Minecrafter';
     src: url('/css/Minecrafter.Reg.ttf');
 }
-title{
+.heading{
     text-align: center;
     font-family: 'Minecrafter', 'Sans-serif';
 }

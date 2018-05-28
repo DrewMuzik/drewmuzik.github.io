@@ -1,10 +1,10 @@
 @font-face  {
-    font-family: retro;
+    font-family: 'Minecrafter';
     src: url('/css/Minecrafter.Reg.ttf');
 }
 title{
     text-align: center;
-    font-family: retro, Arial;
+    font-family: 'Minecrafter', 'Sans-serif';
 }
 body {
     background-color: #f8ecec;

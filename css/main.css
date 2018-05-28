@@ -1,4 +1,11 @@
-
+@font-face  {
+    font-family: retro;
+    src: url('/css/Minecrafter.Reg.TTL');
+}
+title{
+    text-align: center;
+    font-family: retro, Arial;
+}
 body {
     background-color: #f8ecec;
     margin: 60px auto;

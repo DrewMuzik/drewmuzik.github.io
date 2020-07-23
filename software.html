@@ -16,9 +16,25 @@
   <li> 1 task to monitor CPU usage </li>  
 
 <h1> Drivers </h1>
+  <li> SPI for interfacing audio decoder </li>  
+  <li> Uart for interfacing LCD screen </li>  
+  <li> ADC for volume from POT </li>  
+  <li> GPIO for button interface </li>   
+  <li> library for interfacing audio codec </li>   
 
 
-
+<h1> Syncronization </h1>
+  <h3> Binary Semaphores </h3>
+  <li> 1 to signal song metadata read </li>  
+  <li> 1 to display song info </li>  
+  <li> 1 to initiate song playback </li>  
+  <li> 1 to begin volume control (read from ADC)</li>  
+  <li> 1 to initiate user input </li>   
+  <h3> Mutex </h3>
+  <li> 1 lock for screen data </li>  
+  <li> 1 lock for volume </li>   
+  
+  
 </body>
 
 
